@@ -7,7 +7,7 @@ import sklearn
 from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
 model = pickle.load(open('car-prediction-model.pkl', 'rb'))
-@app.route('/',methods=['GET'])
+@app.route('/',methods=['POST'])
 def Home():
     return render_template('index.html')
 
