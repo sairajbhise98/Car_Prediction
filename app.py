@@ -6,13 +6,10 @@ import numpy as np
 import sklearn
 from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
-<<<<<<< HEAD
-model = pickle.load(open('random_forest_regression_model.pkl', 'rb'))
-@app.route('/',methods=['GET'])
-=======
 model = pickle.load(open('car-prediction-model.pkl', 'rb'))
-@app.route('/')
->>>>>>> e7a8f0355b8631a6334fa2fc93530818874fcd3f
+
+model = pickle.load(open('car-prediction-model.pkl', 'rb'))
+@app.route('/',methods=['GET'])
 def Home():
     return render_template('index.html')
 
